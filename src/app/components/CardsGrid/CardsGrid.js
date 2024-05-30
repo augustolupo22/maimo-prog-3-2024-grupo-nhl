@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import styles from '@/app/components/CardsGrid/CardsGrid.module.css'
 
 const CardsGrid = () => {
     const [data, setData] = useState([]);
@@ -25,7 +26,7 @@ const CardsGrid = () => {
     }, []);
 
     return (
-        <div>
+        <div className={styles.prueba}>
             {loading && <p>Loading ...</p>}
             {!loading && data.length > 0 && (
                 <> 
