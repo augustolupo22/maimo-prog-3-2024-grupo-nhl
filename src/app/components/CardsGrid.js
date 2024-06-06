@@ -35,8 +35,8 @@ const CardsGrid = () => {
                         <div key={item.idMeal} className={`${styles.card} ${index < 3 ? styles.featured : ''}`}>
                             <Image
                                 src={item.strMealThumb}
-                                width={400} // Ajusta el tamaño de la imagen aquí para los elementos destacados
-                                height={400} // Ajusta el tamaño de la imagen aquí para los elementos destacados
+                                width={400} 
+                                height={400} 
                                 alt={item.strMeal}
                                 className={styles.image}
                             />

@@ -1,7 +1,7 @@
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* Asegura 5 columnas */
-    grid-auto-rows: minmax(100px, auto); /* Para ajustar el tamaño de las filas */
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
     gap: 20px;
     padding: 20px;
 }
@@ -10,7 +10,7 @@
     text-align: center;
     font-size: 2rem;
     margin-top: 20px;
-    color: #ffffff; /* Color del texto de bienvenida */
+    color: #ffffff; 
 }
 
 .card {
@@ -33,7 +33,7 @@
     margin-top: 10px;
     font-size: 1.2rem;
     text-align: center;
-    color: black; /* Cambia el color del texto a negro */
+    color: black; 
 }
 
 .button {
@@ -54,7 +54,7 @@
 
 
 .image {
-    width: 100%; /* Asegura que las imágenes ocupen todo el espacio disponible en la tarjeta */
+    width: 100%; 
     height: auto;
-    border-radius: 8px; /* Aplica un borde redondeado a la imagen */
+    border-radius: 8px; 
 }
