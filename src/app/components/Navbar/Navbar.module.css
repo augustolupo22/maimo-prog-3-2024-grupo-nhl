@@ -3,9 +3,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #9e3f00;
-    padding: 10px 20px;
-    color: white;
+    background-color: #ffffff;
+    padding: 10px 200px;
+    font-weight: 600;
+    color: rgb(1, 1, 1);
   }
   
   .logo {
@@ -23,13 +24,14 @@
     max-width: 400px;
     padding: 5px;
     border: none;
+    background-color: rgb(224, 224, 224);
     border-radius: 4px;
   }
 
   .searchButton {
     position: absolute;
     right: 32%;
-    top: 2.8%;
+    top: 2.5%;
     transform: translateY(-50%);
     border-radius: 5px;
     color: #ffffff;
