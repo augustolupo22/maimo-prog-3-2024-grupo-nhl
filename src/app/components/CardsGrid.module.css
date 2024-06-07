@@ -4,6 +4,7 @@
     grid-auto-rows: minmax(100px, auto);
     gap: 20px;
     padding: 20px;
+    margin-bottom: 50px;
 }
 
 .welcome {

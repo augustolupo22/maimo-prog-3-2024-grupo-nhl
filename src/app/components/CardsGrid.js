@@ -13,7 +13,7 @@ const CardsGrid = () => {
         const getData = async () => {
             try {
                 const response = await axios.get(
-                    'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'
+                    'https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb'
                 );
                 setData(response.data.meals);
                 setLoading(false);
