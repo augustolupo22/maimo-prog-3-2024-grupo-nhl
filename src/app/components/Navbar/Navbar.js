@@ -1,12 +1,18 @@
-// components/Navbar.js
 import React from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        Logo
+        <Image 
+          src="/logocomida.png" 
+          alt="Logo" 
+          width={50}
+          height={50} 
+          className={styles.logoImage} 
+        />
       </div>
       <div className={styles.search}>
         <input type="text" placeholder="Buscar..." />

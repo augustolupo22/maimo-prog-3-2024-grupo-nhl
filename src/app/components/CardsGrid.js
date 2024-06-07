@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
+import styles from './CardsGrid.module.css';
 
 const CardsGrid = () => {
     const [data, setData] = useState([]);
@@ -12,7 +13,7 @@ const CardsGrid = () => {
         const getData = async () => {
             try {
                 const response = await axios.get(
-                    'https://www.themealdb.com/api/json/v1/1/search.php?s=Pizza'
+                    'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood'
                 );
                 setData(response.data.meals);
                 setLoading(false);
@@ -26,17 +27,24 @@ const CardsGrid = () => {
 
     return (
         <div>
+            <h1 className={styles.welcome}>Bienvenido a Ver las Comidas</h1>
             {loading && <p>Loading ...</p>}
-            {!loading && data.length > 0 && (
-                <> 
-                    <Image
-                        src={data[0].strMealThumb}
-                        width={200}
-                        height={200}
-                        alt={data[0].strMeal}
-                    />
-                    <h2>{data[0].strMeal}</h2>
-                </>
+            {!loading && (
+                <div className={styles.grid}>
+                    {data.map((item, index) => (
+                        <div key={item.idMeal} className={`${styles.card} ${index < 3 ? styles.featured : ''}`}>
+                            <Image
+                                src={item.strMealThumb}
+                                width={400} 
+                                height={400} 
+                                alt={item.strMeal}
+                                className={styles.image}
+                            />
+                            <h2>{item.strMeal}</h2>
+                            <button className={styles.button}>Ver más</button>
+                        </div>
+                    ))}
+                </div>
             )}
         </div>
     );
