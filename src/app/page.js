@@ -1,14 +1,10 @@
-import styles from "./page.module.css";
-import Navbar from "./components/Navbar/Navbar";
-import CardsGrid from "./components/CardsGrid";
-import Footer from "./components/Footer";
+import styles from "@/app/page.module.css";
+import CardsGrid from "@/app/components/CardsGrid/CardsGrid";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Navbar />
       <CardsGrid />
-      <Footer />
     </main>
   );
 }

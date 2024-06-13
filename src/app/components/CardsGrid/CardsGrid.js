@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Image from 'next/image';
 import styles from './CardsGrid.module.css';
+import Link from 'next/link';
 
 const CardsGrid = () => {
     const [data, setData] = useState([]);
@@ -15,6 +16,7 @@ const CardsGrid = () => {
                 const response = await axios.get(
                     'https://www.themealdb.com/api/json/v1/1/filter.php?c=Lamb'
                 );
+                console.log(response.data.meals);
                 setData(response.data.meals);
                 setLoading(false);
             } catch (error) {
@@ -41,6 +43,7 @@ const CardsGrid = () => {
                                 className={styles.image}
                             />
                             <h2>{item.strMeal}</h2>
+                            <Link href={`/meal/${item.idMeal}`}>Mas Detalles</Link>
                             <button className={styles.button}>Ver más</button>
                         </div>
                     ))}
