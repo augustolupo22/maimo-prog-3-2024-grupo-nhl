@@ -1,0 +1,102 @@
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Alineación vertical de los elementos */
+    color: black;
+    transition: transform 0.2s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 20px;
+}
+
+.image {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.instructions {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-top: auto; /* Añadido para alinear verticalmente el texto */
+}
+
+.ingredients {
+
+    list-style-type: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredient-item {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    transition: transform 0.2s;
+}
+
+.button {
+    margin-top: 10px;
+    max-width: 100px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #e98b60;
+}
