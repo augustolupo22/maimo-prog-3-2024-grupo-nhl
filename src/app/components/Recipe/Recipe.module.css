@@ -1,3 +1,11 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color:#ff6600;
+  }
+
 .container {
     max-width: 1920px;
     margin: 0 auto;
@@ -10,15 +18,13 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
+    color: black;
+}
+
+.container_inferior{
     display: flex;
     flex-direction: row;
     align-items: flex-start; /* Alineación vertical de los elementos */
-    color: black;
-    transition: transform 0.2s;
-}
-
-.container:hover {
-    transform: scale(1.02);
 }
 
 .left-section {
@@ -40,7 +46,6 @@
     flex-direction: column;
     justify-content: flex-start;
     flex: 1;
-    margin-top: 50px;
 }
 
 .title {

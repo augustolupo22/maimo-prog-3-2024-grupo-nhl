@@ -15,6 +15,8 @@ export default function Recipe({ id }) {
                 const response = await axios.get(
                     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
                 );
+                
+                console.log(response.data.meals[0]);
                 setReceta(response.data.meals[0]);
             } catch (error) {
                 console.error("Error fetching recipe: ", error);
@@ -35,9 +37,11 @@ export default function Recipe({ id }) {
     }
 
     return (
+        <main className={styles.main}>
         <div className={styles.container}>
-            <div className={styles["left-section"]}>
                 <h1 className={styles.title}>{receta.strMeal}</h1>
+                <div className={styles.container_inferior}>
+            <div className={styles["left-section"]}>
                 <Image 
                     src={receta.strMealThumb}
                     width={500}
@@ -47,13 +51,17 @@ export default function Recipe({ id }) {
                 />
             </div>
             <div className={styles.details}>
+                <h2>Receta</h2>
                 <p className={styles.instructions}>{receta.strInstructions}</p>
                 <h2>Ingredientes</h2>
                 <ul className={styles.ingredients}>
                     {ingredients}
                 </ul>
+                
                 <Link href="/" className={styles.button}>Volver</Link>
             </div>
+                </div>
         </div>
+        </main>
     );
 }
