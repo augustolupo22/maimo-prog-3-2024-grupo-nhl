@@ -4,18 +4,21 @@ import axios from 'axios';
 import Image from 'next/image';
 import styles from './CardsGrid.module.css';
 import Link from 'next/link';
+import Filter from './Filter'; // Asegúrate de que esta ruta es correcta
 
 const CardsGrid = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [category, setCategory] = useState('');
 
     useEffect(() => {
         setLoading(true);
         const getData = async () => {
             try {
-                const response = await axios.get(
-                    'https://www.themealdb.com/api/json/v1/1/filter.php?i=sugar'
-                );
+                const url = category 
+                    ? `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+                    : 'https://www.themealdb.com/api/json/v1/1/filter.php?i=sugar';
+                const response = await axios.get(url);
                 setData(response.data.meals);
                 setLoading(false);
             } catch (error) {
@@ -24,11 +27,12 @@ const CardsGrid = () => {
             }
         };
         getData();
-    }, []);
+    }, [category]);
 
     return (
         <div>
             <h1 className={styles.welcome}>Bienvenido a Ver las Comidas</h1>
+            <Filter setCategory={setCategory} />
             {loading && <p>Loading ...</p>}
             {!loading && (
                 <div className={styles.grid}>

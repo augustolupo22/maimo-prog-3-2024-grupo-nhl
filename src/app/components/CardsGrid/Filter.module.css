@@ -1,0 +1,20 @@
+.filterContainer {
+    display: flex;
+    padding-left: 1365px;
+    background-color: #ff6600; /* Color naranja para el fondo debajo de las cards */
+    
+  }
+  
+  .label {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 3px;
+  }
+  
+  .select {
+    padding: 5px;
+    border-radius: 8px;
+    color: black;
+    background-color: white;
+  }
